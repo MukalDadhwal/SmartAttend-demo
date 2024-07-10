@@ -1,0 +1,31 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "A chat application using socketio",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MukalDadhwal/Chatapp.git"
+  },
+  "keywords": [
+    "chat",
+    "node",
+    "websocket"
+  ],
+  "author": "Metlight",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MukalDadhwal/Chatapp/issues"
+  },
+  "homepage": "https://github.com/MukalDadhwal/Chatapp#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

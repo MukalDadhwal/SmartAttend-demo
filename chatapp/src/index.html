@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat app</title>
+
+</head>
+
+<body>
+    <h1>Chat application - Client</h1>
+    <button type="submit" id="submit-button">Submit</button>
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+
+        var socket = io();
+        socket.on("connect", () => {
+            console.log(`server id: ${socket.id}`);
+        })
+
+        socket.on("server", (msg) => {
+            console.log(`Server replied: ${msg}`);
+        })
+
+        socket.on("client2", (msg) => {
+            console.log(`client`)
+        })
+
+        let submit = document.getElementById("submit-button")
+
+        submit.addEventListener('click', () => {
+            socket.emit("client", "Hey how you doing old server!")
+        })
+
+
+    </script>
+</body>
+
+</html>
